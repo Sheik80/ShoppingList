@@ -12,14 +12,14 @@ data class NoteItem(
     val id: Int?,
 
     @ColumnInfo(name = "title")
-    val title: String,
+    val title: String, //name of note
 
     @ColumnInfo(name = "content")
     val content: String,
 
     @ColumnInfo(name = "time")
-    val time: String,
+    val time: String,  // when create note
 
     @ColumnInfo(name = "category")
-    val category: String
+    val category: String //for filtering
 )

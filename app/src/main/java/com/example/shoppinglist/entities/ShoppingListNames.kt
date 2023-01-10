@@ -5,16 +5,16 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
 
-@Entity(tableName = "shopping_lis_names")
+@Entity(tableName = "shopping_list_names")
 data class ShoppingListNames(
     @PrimaryKey (autoGenerate = true)
-    val id: Int?, //here we generater primaryKey for DB and add new peremmennay to implement this key
+    val id: Int?, //here we generater primaryKey for DB and add new peremmennay to implement this key, generator works only with nullable
 
     @ColumnInfo (name = "name")
-    val name: String, //can't be null becouse we create column of table, and BD can't be without names
+    val name: String, //can't be null because we create column of table, and BD can't be without names
 
     @ColumnInfo (name = "time")
-    val time: String, //we want to knoe when user create shopping
+    val time: String, //we want to know when user create shopping
 
     @ColumnInfo (name = "allItemCounter")
     val allItemCounter: Int, //we want to know how items we shop, and create progressbar for shop next items

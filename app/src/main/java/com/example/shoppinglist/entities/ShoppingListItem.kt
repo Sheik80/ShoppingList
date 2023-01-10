@@ -10,18 +10,18 @@ data class ShoppingListItem(
     val id: Int?,
 
     @ColumnInfo(name = "name")
-    val name: String, //here we write neme of items
+    val name: String, //here we write name of items
 
     @ColumnInfo(name = "itemInfo")
-    val itemInfo: String?, //info about items
+    val itemInfo: String?, //info about items, maybe 300 gram
 
     @ColumnInfo(name = "itemChecked")
-    val itemChecked: Int=0,     //info click or not our item in basket, if choose we will write 1
+    val itemChecked: Int=0,     //info click buy or not our item in basket, if choose we will write 1
 
     @ColumnInfo(name = "listId")
     val listId: Int,         //here we store id of our list, to find it
 
     @ColumnInfo(name = "itemType")
-    val itemType: String = "item",      // it's librory for names of our items, if item значит выюбираем если нет смотрим в корзину и выбираем из нашей библиотеки
+    val itemType: String = "item",      // it's library for names of our items, if item значит выюбираем если нет смотрим в корзину и выбираем из нашей библиотеки
 
-)  //нет seriazable потому что будем вызывать из другого класса
+)  //нет serializable потому что будем вызывать из другого класса
