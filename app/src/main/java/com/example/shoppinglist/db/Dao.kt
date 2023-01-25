@@ -8,8 +8,10 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface Dao {
-    @Insert
-    suspend fun insertNote(note: NoteItem)
     @Query("SELECT * FROM note_list")
     fun getAllNotes() : Flow<List<NoteItem>>
+
+    @Insert
+    suspend fun insertNote(note: NoteItem)
+
 }
